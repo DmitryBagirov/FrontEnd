@@ -1,3 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /**
