@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-	<meta charset="UTF-8">
-	<title>Palo Alto</title>
-	<link rel="stylesheet" href="../styles/style.css">
-	<link rel="stylesheet" href="../styles/normalize.css">
-</head>
-
-<body>
-	<div class="statusbar"></div>
-	<div class="wrapper">
-		<header>
-			<a class="logo verticalmiddle" href="index.html"></a>
-			<nav class="verticalmiddle">
-				<ul class="menu">
-					<li><a class="menu__link inactivelink" href="index.html">home</a></li>
-					<li><a class="menu__link" href="about.html">about</a></li>
-					<li><a class="menu__link" href="#">archive</a></li>
-					<li><a class="menu__link" href="contacts.html">contact</a></li>
-					<li><a class="menu__linksearch" href="search.html"></a></li>
-				</ul>
-			</nav>
-		</header>
+{% extends "layout.html" %}
+{% set navInactiveItem = 1%}
+{% block main %}
 		<article class="article">
 			<div class="article__wrapper">
 				<div class="article__postdate">sep 20</div>
@@ -114,37 +92,4 @@
 				</div>
 			</div>
 		</article>
-	</div>
-	<footer>
-		<div class="footer__wrapper">
-			<a class="logo footer__logo" href="index.html"></a>
-			<nav>
-				<ul class="menu footer__menu">
-					<li><a class="menu__link inactivelink" href="index.html">home</a></li>
-					<li><a class="menu__link" href="about.html">about</a></li>
-					<li><a class="menu__link" href="#">archive</a></li>
-					<li><a class="menu__link" href="contacts.html">contact</a></li>
-					<li><a class="menu__linkfootersearch" href="search.html"></a></li>
-				</ul>
-			</nav>
-			<section>
-				<hr class="footer__hr">
-				<p class="section__text text--footer">
-					Nunc placerat dolor at lectus hendrerit dignissim. Ut tortor sem, consectetur nec hendrerit ut, ullamcorper ac odio. Donec viverra ligula at quam tincidunt imperdiet. Nulla mattis tincidunt auctor.
-				</p>
-				<hr class="footer__hr">
-				<p class="section__copyright">
-					© 2015 - Palo Alto. All Rights Reserved. Designed & Developed by <a href="#" class="copyright__team">PixelBuddha Team</a>
-				</p>
-				<ul class="social">
-					<li><a class="social__facebook" href="#"></a></li>
-					<li><a class="social__tweetter" href="#"></a></li>
-					<li><a class="social__instagram" href="#"></a></li>
-					<li><a class="social__pinterest" href="#"></a></li>
-				</ul>
-			</section>
-		</div>
-	</footer>
-</body>
-
-</html>
+{% endblock %}
