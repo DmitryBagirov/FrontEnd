@@ -1,2 +1,4 @@
 *.lnk
 *.psd
+dist/
+node_modules/
