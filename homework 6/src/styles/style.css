@@ -2,7 +2,7 @@
 	font-family:'Lato';
 	src:url(../fonts/Lato-Regular.ttf);
 }
-
+		
 body {
 	background-color: #f7f9fc;
 }
@@ -162,7 +162,7 @@ nav {
 	color: rgb(189, 189, 189);
 }
 
-.section__postheader {
+.article__postheader {
 	font-size: 40px;
 	font-family: "Lato";
 	margin-top: 24px;
@@ -203,7 +203,7 @@ hr {
 	text-decoration: none;
 }
 
-.section__prologue {
+.article__prologue {
 	font-size: 25px;
 	font-family: "Lato";
 	color: rgba(0, 0, 0, 0.502);
@@ -212,7 +212,7 @@ hr {
 	margin: 42px 0;
 }
 
-.section__text {
+.article__text {
 	font-size: 17px;
 	font-family: "Lato";
 	color: #585858;
@@ -296,7 +296,7 @@ hr {
 	font-weight: bold;
 }
 
-.section__quote {
+.article__quote {
 	font-size: 20px;
 	font-family: "Lato";
 	color: rgba(0, 0, 0, 0.4);
@@ -308,7 +308,6 @@ hr {
 /* FOOTER */
 
 footer {
-	//height: 530px;
 	background-color: #5c6bc0;
 	margin-top: 117px;
 	padding-bottom: 79px;
@@ -355,11 +354,13 @@ footer {
 }
 
 .text--footer {
+	font-family: "Lato";
+	line-height: 1.765;
 	font-size: 13px;
 	color: #a0a7d7;
 }
 
-.section__copyright {
+.copyright {
 	font-size: 14px;
 	font-family: "Lato";
 	color: rgba(255, 255, 255, 0.4);
@@ -444,6 +445,38 @@ footer {
 
 .menu__linkfootersearch:hover {
 	background-color: #5360ac;
-	background-image: url(../images/Search1.png);
 	background-repeat: no-repeat;
+}
+
+@media only screen and (min-device-pixel-ratio: 1.5) {
+	.logo {
+		background-image: url(../images/logo2x.png);
+	}
+	.menu__linksearch {
+		background-image: url(../images/Search2x.png);
+	}
+	.menu__linksearch:hover {
+		background-image: url(../images/hoversearch2x.png);
+	}
+	.mask__button {
+		background-image: url(../images/pinterest%20button2x.png);
+	}
+	.footer__logo {
+		background-image: url(../images/footerlogo2x.png);
+	}
+	.social__facebook {
+		background-image: url(../images/facebook2x.png);
+	}
+	.social__tweetter {
+		background-image: url(../images/twitter2x.png);
+	}
+	.social__instagram {
+		background-image: url(../images/instagram2x.png);
+	}
+	.social__pinterest {
+		background-image: url(../images/pinterest2x.png);
+	}
+	.menu__linkfootersearch {
+		background-image: url(../images/Search1-2x.png);
+	}
 }

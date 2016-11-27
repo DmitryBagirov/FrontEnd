@@ -1,4 +1,5 @@
 *.lnk
 *.psd
-dist/
+build/
+prod/
 node_modules/
