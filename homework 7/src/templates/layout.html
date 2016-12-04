@@ -5,19 +5,20 @@
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/png" href="../images/fav16x16.png" sizes="32x32"/>
 	<link rel="shortcut icon" type="image/png" href="../images/fav32x32.png" sizes="16x16"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Palo Alto project">
 	<meta name="keywords" content="Palo Alto, travel, Yosemite ">
 	<title>{{ title }}</title>
-	<link rel="stylesheet" href="../styles/style.css">
 	<link rel="stylesheet" href="../vendor/vendor.css">
+	<link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
 	<div class="statusbar"></div>
 	<div class="wrapper">
 		<header>
 			<a class="logo verticalmiddle" href="index.html"></a>
-			<nav class="verticalmiddle">
-				<ul class="menu">
+			<nav class="verticalmiddle header_nav">
+				<ul class="menu header_menu">
 					<li><a {% if navInactiveItem == 1 %}class="menu__link inactivelink"{% else %}class="menu__link"{% endif %} href="index.html">home</a></li>
 					<li><a {% if navInactiveItem == 2 %}class="menu__link inactivelink"{% else %}class="menu__link"{% endif %} href="about.html">about</a></li>
 					<li><a {% if navInactiveItem == 3 %}class="menu__link inactivelink"{% else %}class="menu__link"{% endif %} href="#">archive</a></li>
