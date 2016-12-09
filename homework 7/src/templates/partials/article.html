@@ -1,0 +1,44 @@
+<article class="article">
+	{% if img.image1x %}
+	<div class="mask">
+		<img class="article__img" width="{{img.width}}" height="{{img.height}}" srcset="{{img.image1x}} 1x, {{img.image2x}} 2x" alt="{{img.alt}}">
+		<a class="mask__button" href="#"></a>
+	</div>
+	{% endif %}
+	<div class="article__wrapper">
+		<div class="article__postdate">{{post_date}}</div>
+		<a href="#" class="category">{{category}}</a>
+		<h2 class="article__postheader">{{header}}</h2>
+		<hr >
+		{% for txt in text %}
+			{% if txt.type == 'normal' %}
+				<p class="article__text">
+					{{txt.text}}
+				</p>
+			{% endif %}
+			{% if txt.type == 'quote' %}
+				<p class="article__quote">
+					{{txt.text}}
+				</p>
+			{% endif %}
+			{% if txt.type == 'image' %}
+				<div class="mask left">
+					<img class="article__img" width="{{txt.width}}" height="{{txt.height}}" srcset="{{txt.image1x}} 1x, {{img.image2x}} 2x" alt="{{txt.alt}}">
+					<a class="mask__button" href="#"></a>
+				</div>
+			{% endif %}
+		{% endfor %}
+		<div class="article__footer">
+			<a href="#" class="button verticalmiddle">read more</a>
+			<ul class="tags verticalmiddle">
+				{% for tag in tags %}
+					<li>
+						<a class="tags__link" href="#">
+							{{tag}}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>	
+	</div>
+</article>
