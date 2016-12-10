@@ -3,6 +3,7 @@ var nunjucks = require('gulp-nunjucks');
 var concat = require('gulp-concat');
 var cssmin = require('gulp-cssmin');
 var autoprefixer = require('gulp-autoprefixer');
+var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 
 var path = {
@@ -86,8 +87,10 @@ gulp.task('html', function () {
     .pipe(gulp.dest(path.build.html));
 });
 ////////////////////////////
-gulp.task('pjs', function () {
+gulp.task('js-min', function () {
   return gulp.src(path.js)
+    .pipe(concat('scripts.js'))
+    .pipe(uglify())
     .pipe(gulp.dest(path.prod.js));
 });
 
@@ -134,7 +137,7 @@ gulp.task('phtml', function () {
 });
 /////////////////////////////
 gulp.task('build', ['html', 'css', 'images', 'fonts', 'vendor-css', 'js', 'mock', 'partials']);
-gulp.task('prod', ['phtml', 'css-min', 'vendor-css-min', 'pimages', 'pfonts', 'pjs', 'pmock', 'ppartials']);
+gulp.task('prod', ['phtml', 'css-min', 'vendor-css-min', 'pimages', 'pfonts', 'js-min', 'pmock', 'ppartials']);
 
 gulp.task('watch', function () {
   	gulp.watch(path.css, ['css']);
