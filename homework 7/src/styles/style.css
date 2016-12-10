@@ -278,6 +278,7 @@ hr {
 
 .category {
 	position: absolute;
+	z-index: 0;
 	padding: 10px 12px;
 	right: -12px;
 	top: 20px;
@@ -544,9 +545,17 @@ footer {
 		display: none;
 	}
 	.header_menu {
-		display: none; 
+		display: none;
+		position: absolute;
+		z-index: 9999;
+		top: 10px;
+		right: 55px;
+		padding: 20px;
+		background-color: #252b4d;
 	} 
 	.header_nav { 
+		z-index: 1;
+		position: absolute;
 		width: 36px; 
 		height: 26px; 
 		background: url(../images/burger.png);
@@ -554,6 +563,25 @@ footer {
 	}
 	.input {
 		width: 100%;
+	}
+	.menu__link {
+		color: white;
+	}
+	.inactivelink {
+		color: #a9afdb;
+	}
+	.menu li {
+		display: block;
+		list-style: none;
+		margin: 0;
+		margin-bottom: 25px;
+	}
+	.menu li:nth-last-child(2) {
+		margin: 0;
+	}
+	.menu li:last-child {
+		display: none;
+		margin-bottom: 0;
 	}
 }
 
@@ -618,16 +646,18 @@ footer {
 		margin: 0;
 		margin-bottom: 25px;
 	}
-	.copyright__team {
-		display: block;
-	}
 	.menu li:last-child {
 		display: none;
 	}
+	.copyright__team {
+		display: block;
+	}
 	.header_menu {
-		display: none; 
+		display: none;
 	} 
 	.header_nav { 
+		z-index: 1;
+		position: absolute;
 		width: 36px; 
 		height: 26px; 
 		background: url(../images/burger.png);

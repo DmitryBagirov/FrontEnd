@@ -17,11 +17,6 @@ $(document).ready(function() {
 	
 	$('.header_nav').click(function() {
 		var menu = $('.header_menu');
-		menu.css('position','absolute');
-		menu.css('top','10px');
-		menu.css('right','55px');
-		menu.css('padding','20px');
-		menu.css('background-color','#252b4d');
 		menu.slideToggle(250);
 	});
 });
