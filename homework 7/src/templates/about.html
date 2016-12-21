@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% set title = "About" %}
+{% set navInactiveItem = 2%}
+{% block main %}
+		<article class="article">
+			<div class="article__wrapper">
+				<h2 class="article__postheader">
+					About
+				</h2>
+				<hr>
+				<form class="contacts about" action="send.php" id="contacts">
+					<div class="label">First Name</div> 
+					<input class="input" name="name" type="text" placeholder="Your Name">
+					<div class="label">Last Name</div>
+					<input class="input" name="lastname" type="text" placeholder="Last Name">
+					<div class="label">E-mail</div>
+					<input class="input" name="email" type="email" placeholder="E-mail">
+					<div class="label">Phone</div>
+					<input class="input" pattern="^\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}$" name="phone" type="tel" placeholder="+_(___)___-__-__">
+					<div class="label datepicker">Date of Birth</div>
+					<input id='datepicker' class="input" name="birth" type="text" placeholder="Birth">
+					<div class="label">Sex</div>
+					<label class="radiotext" for="radio1">
+						<input checked id="radio1" class="input radio" name="sex" type="radio" value="Male">
+						Male
+					</label>
+					<label class="radiotext" for="radio2">
+						<input id="radio2" class="input radio" name="sex" type="radio" value="Female">
+						Female
+					</label>
+					<input class="button submit" type="submit" value="send message" form="contacts">
+				</form>
+			</div>
+		</article>
+{% endblock %}
