@@ -1,0 +1,39 @@
+{
+	"title": "Schema",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "text",
+			"title": "First name"
+		},
+		"lastname": {
+			"type": "text",
+			"title": "Last name"
+		},
+		"email": {
+			"type": "email",
+			"title": "Email"
+		},
+		"phone": {
+			"type": "text",
+			"title": "Phone"
+		},
+		"birth": {
+			"type": "string",
+			"title": "birth"
+		},
+		"sex": {
+			"type": "radio",
+			"radios": [
+				{
+					"label":"Male",
+					"checked": true
+				},
+				{
+					"label":"Female"
+				}
+			]
+		}
+		"required": ["name", "lastname", "email", "phone", "date"]
+	}
+}
